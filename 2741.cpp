@@ -1,8 +1,11 @@
-#include <iostream>
+﻿#include <iostream>
 
 using namespace std;
 
 int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(nullptr);
+
 	int n;
 
 	cin >> n;
@@ -11,6 +14,8 @@ int main() {
 		for (int i = 1; i <= n; i++) {
 			cout << i << "\n";
 		}
-		break;
+		break; //while 문 break
 	}
+
+	return 0;
 }
