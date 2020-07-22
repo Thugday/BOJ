@@ -18,9 +18,9 @@ int main() {
 		cin >> a[i]; // 주어진 정수 input 해주기.
 	}
 
-	auto it1 = min_element(a.begin(), a.end());
+	auto it1 = min_element(a.begin(), a.end()); // 최솟값 찾아주기.
 	cout << *it1 << ' '; 
-	auto it2 = max_element(a.begin(), a.end());
+	auto it2 = max_element(a.begin(), a.end()); // 최댓값 찾아주기.
 	cout << *it2;
 
 	return 0;
