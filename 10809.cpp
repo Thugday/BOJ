@@ -1,5 +1,6 @@
 ﻿#include <iostream>
 #include <string>
+#include <algorithm>
 
 using namespace std;
 
@@ -10,16 +11,17 @@ int main() {
 	string s;
 	cin >> s;
 
-	for (int i = 'a'; i <= 'z'; i++) { // 소문자 범위 설정.
-		auto it = find(s.begin(), s.end(), i); // string에 들어가는 알파벳 위치 찾기
-		if (it == s.end()) {
-			cout << -1 << '\n'; // 알파벳이 포함되지 않으면 -1 출력.
+	for (int i = 'a'; i <= 'z'; i++) {
+		auto it = find(s.begin(), s.end(), i); // find 함수를 사용해 포함되어 있는 함수 중 i의 이터레이터 찾기.
+		if (it == s.end()) { // 없다면 end를 return, -1을 출력.
+			cout << -1 << ' ';
 		}
-		else {
-			cout << (it - s.begin()) << '\n';
+		else { // 있다면 알파벳의 위치를 찾아준다.
+			cout << (it - s.begin()) << ' '; 
 		}
 	}
 
 	cout << '\n';
+
 	return 0;
 }
