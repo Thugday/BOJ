@@ -19,7 +19,7 @@ bool bipartite(int x, int y) { // 이분그래프인지 확인해준다.
 				return false;
 			}
 		}
-		else if (check[nxt] == check[x]) {
+		else if (check[nxt] == check[x]) { // 방문한 점일 경우 현재 정점과 다음 정점의 색이 같으면 false.
 			return false;
 		}
 	}
